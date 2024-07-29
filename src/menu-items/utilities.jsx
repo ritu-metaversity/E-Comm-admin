@@ -18,7 +18,6 @@ const icons = {
   AppstoreAddOutlined
 };
 
-// ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const utilities = {
   id: 'utilities',

@@ -15,7 +15,6 @@ import Breadcrumbs from 'components/@extended/Breadcrumbs';
 
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 
-// ==============================|| MAIN LAYOUT ||============================== //
 
 export default function DashboardLayout() {
   const { menuMasterLoading } = useGetMenuMaster();
@@ -23,7 +22,6 @@ export default function DashboardLayout() {
 
   useEffect(() => {
     handlerDrawerOpen(!downXL);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [downXL]);
 
   if (menuMasterLoading) return <Loader />;

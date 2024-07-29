@@ -7,7 +7,6 @@ const icons = {
   ProfileOutlined
 };
 
-// ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
 
 const pages = {
   id: 'authentication',
