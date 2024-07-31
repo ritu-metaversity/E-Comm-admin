@@ -77,9 +77,9 @@ export default function Profile() {
       <ButtonBase
         sx={{
           p: 0.25,
-          bgcolor: open ? iconBackColorOpen : 'transparent',
+          bgcolor: 'transparent',
           borderRadius: 1,
-          '&:hover': { bgcolor: 'secondary.lighter' },
+          '&:hover': { bgcolor: 'transparent' },
           '&:focus-visible': { outline: `2px solid ${theme.palette.secondary.dark}`, outlineOffset: 2 }
         }}
         aria-label="open profile"
@@ -89,10 +89,10 @@ export default function Profile() {
         onClick={handleToggle}
       >
         <Stack direction="row" spacing={1.25} alignItems="center" sx={{ p: 0.5 }}>
-          <Avatar alt="profile user" src={avatar1} size="sm" />
-          <Typography variant="subtitle1" sx={{ textTransform: 'capitalize' }}>
+          <Avatar alt="profile user" src={avatar1} size="md" />
+          {/* <Typography variant="subtitle1" sx={{ textTransform: 'capitalize', color:"#ffffff" }}>
             John Doe
-          </Typography>
+          </Typography> */}
         </Stack>
       </ButtonBase>
       <Popper
@@ -126,7 +126,7 @@ export default function Profile() {
                           <Stack>
                             <Typography variant="h6">John Doe</Typography>
                             <Typography variant="body2" color="text.secondary">
-                              UI/UX Designer
+                              Admin
                             </Typography>
                           </Stack>
                         </Stack>

@@ -47,7 +47,6 @@ const actionSX = {
   transform: 'none'
 };
 
-// ==============================|| HEADER CONTENT - NOTIFICATION ||============================== //
 
 export default function Notification() {
   const theme = useTheme();
@@ -74,7 +73,7 @@ export default function Notification() {
       <IconButton
         color="secondary"
         variant="light"
-        sx={{ color: 'text.primary', bgcolor: open ? iconBackColorOpen : 'transparent' }}
+        sx={{ color: '#fff', bgcolor: 'transparent', fontSize:'20px' }}
         aria-label="open profile"
         ref={anchorRef}
         aria-controls={open ? 'profile-grow' : undefined}
@@ -115,7 +114,7 @@ export default function Notification() {
                     </>
                   }
                 >
-                  <List
+                  {/* <List
                     component="nav"
                     sx={{
                       p: 0,
@@ -234,7 +233,7 @@ export default function Notification() {
                         }
                       />
                     </ListItemButton>
-                  </List>
+                  </List> */}
                 </MainCard>
               </ClickAwayListener>
             </Paper>

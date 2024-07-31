@@ -7,7 +7,6 @@ import Box from '@mui/material/Box';
 // assets
 import SearchOutlined from '@ant-design/icons/SearchOutlined';
 
-// ==============================|| HEADER CONTENT - SEARCH ||============================== //
 
 export default function Search() {
   return (
@@ -17,8 +16,8 @@ export default function Search() {
           size="small"
           id="header-search"
           startAdornment={
-            <InputAdornment position="start" sx={{ mr: -0.5 }}>
-              <SearchOutlined />
+            <InputAdornment position="start" sx={{ mr: -0.5, color: '#ffffff' }}>
+              <SearchOutlined sx={{}}/>
             </InputAdornment>
           }
           aria-describedby="header-search-text"
@@ -26,6 +25,19 @@ export default function Search() {
             'aria-label': 'weight'
           }}
           placeholder="Ctrl + K"
+          sx={{
+            // backgroundColor: '#ffffff',
+            color: '#ffffff',
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#ffffff'
+            },
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#f2f2f2'
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#f2f2f2'
+            }
+          }}
         />
       </FormControl>
     </Box>

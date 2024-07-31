@@ -22,10 +22,8 @@ export default function NavItem({ item, level }) {
   const openItem = menuMaster.openedItem;
 
   let itemTarget = '_self';
-  if (item.target) {
-    itemTarget = '_blank';
-  }
-  let listItemProps = { component: forwardRef((props, ref) => <Link ref={ref} {...props} to={item.url} target={itemTarget} />) };
+
+  let listItemProps = { component: forwardRef((props, ref) => <Link ref={ref} {...props} to={item.url} />) };
   if (item?.external) {
     listItemProps = { component: 'a', href: item.url, target: itemTarget };
   }
@@ -42,8 +40,8 @@ export default function NavItem({ item, level }) {
     // eslint-disable-next-line
   }, [pathname]);
 
-  const textColor = 'text.primary';
-  const iconSelectedColor = 'primary.main';
+  const textColor = '#fff';
+  const iconSelectedColor = '#000';
 
   return (
     <ListItemButton
@@ -62,9 +60,9 @@ export default function NavItem({ item, level }) {
           '&.Mui-selected': {
             bgcolor: 'primary.lighter',
             borderRight: `2px solid ${theme.palette.primary.main}`,
-            color: iconSelectedColor,
+            color: '#000',
             '&:hover': {
-              color: iconSelectedColor,
+              color: '#000',
               bgcolor: 'primary.lighter'
             }
           }
@@ -86,7 +84,7 @@ export default function NavItem({ item, level }) {
         <ListItemIcon
           sx={{
             minWidth: 28,
-            color: isSelected ? iconSelectedColor : textColor,
+            color: isSelected ? '#000' : textColor,
             ...(!drawerOpen && {
               borderRadius: 1.5,
               width: 36,
@@ -94,14 +92,16 @@ export default function NavItem({ item, level }) {
               alignItems: 'center',
               justifyContent: 'center',
               '&:hover': {
-                bgcolor: 'secondary.lighter'
+                bgcolor: '#fff',
+                color: '#000'
               }
             }),
             ...(!drawerOpen &&
               isSelected && {
-                bgcolor: 'primary.lighter',
+                bgcolor: '#fff',
                 '&:hover': {
-                  bgcolor: 'primary.lighter'
+                  bgcolor: '#fff',
+                  color: '#000'
                 }
               })
           }}

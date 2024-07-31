@@ -17,7 +17,7 @@ export default function NavGroup({ item }) {
       case 'collapse':
         return (
           <Typography key={menuItem.id} variant="caption" color="error" sx={{ p: 2.5 }}>
-            collapse - only available in paid version
+            fsvgdfgdfgf
           </Typography>
         );
       case 'item':
@@ -25,7 +25,7 @@ export default function NavGroup({ item }) {
       default:
         return (
           <Typography key={menuItem.id} variant="h6" color="error" align="center">
-            Fix - Group Collapse or Items
+           dfgdfgdfgdf
           </Typography>
         );
     }
@@ -37,7 +37,7 @@ export default function NavGroup({ item }) {
         item.title &&
         drawerOpen && (
           <Box sx={{ pl: 3, mb: 1.5 }}>
-            <Typography variant="subtitle2" color="textSecondary">
+            <Typography variant="subtitle2" color="text">
               {item.title}
             </Typography>
             {/* only available in paid version */}
